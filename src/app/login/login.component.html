@@ -1,0 +1,31 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+        <img src="assets/login/1.png" alt="" id="img">
+        <img src=" assets/computer.png " alt="Sistema Gerencial" width="90%"></mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="login-Card">
+
+            <img src="assets/burguer.png" alt="Logo" width="30%">
+            <p>LOGIN</p>
+            <mat-card-content>
+                <form [formGroup]="login">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">User</label>
+                        <input type="email" class="form-control" id="user" formControlName="user" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="pass" formControlName="pass" placeholder="Password">
+                    </div>
+                </form>
+            </mat-card-content>
+            <mat-card-actions style="text-align: center;">
+                <button mat-raised-button>Logon</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

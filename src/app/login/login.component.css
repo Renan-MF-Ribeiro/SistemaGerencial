@@ -1,0 +1,25 @@
+mat-grid-list {
+    background-color: #ffb9a6;
+}
+
+.login-Card {
+    max-width: 400px;
+    text-align: center;
+    background-color: #A7CFE8;
+    border-radius: 20%;
+}
+
+p {
+    font-size: x-large;
+    font-family: 'Alfa Slab One', cursive;
+    margin: 1vw;
+}
+
+#img {
+    position: absolute;
+    width: 39%;
+    top: 277px;
+    left: 210px;
+    height: 26.5%;
+    border-radius: 4%;
+}
