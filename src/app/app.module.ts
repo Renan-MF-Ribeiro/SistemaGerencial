@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
+import firebase from "firebase/app";
 
 import {MatCardModule} from '@angular/material/card';
 import {MatCommonModule} from '@angular/material/core';
@@ -15,6 +16,12 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatDividerModule} from '@angular/material/divider';
 
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { Auth } from './login/services/auth';
+import {LayoutModule} from '@angular/cdk/layout';
 
 
 
@@ -34,11 +41,16 @@ import {MatDividerModule} from '@angular/material/divider';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatDividerModule
+    MatDividerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    LayoutModule,
+
     
 
   ],
-  providers: [ {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}},
+  providers: [ {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}},Auth,
   { provide: FormBuilder, useClass: FormBuilder }],
   bootstrap: [AppComponent]
 })
